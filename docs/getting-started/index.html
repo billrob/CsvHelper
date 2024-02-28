@@ -172,6 +172,7 @@ change the configuration for <code>NewLine</code>.</p>
 <pre><code class="language-cs">using (var reader = new StreamReader(&quot;path\\to\\file.csv&quot;))
 using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
 {
+	csv.Read();
 	var records = csv.GetRecords&lt;Foo&gt;();
 }
 </code></pre>
@@ -196,6 +197,7 @@ just change how our properties match against the header names.</p>
 using (var reader = new StreamReader(&quot;path\\to\\file.csv&quot;))
 using (var csv = new CsvReader(reader, config))
 {
+	csv.Read();
 	var records = csv.GetRecords&lt;Foo&gt;();
 }
 </code></pre>
